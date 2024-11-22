@@ -10,8 +10,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Copy the server block configuration
 COPY default.conf /etc/nginx/conf.d/
 
-# Copy the HTML file to the appropriate location
-COPY index.html /usr/share/nginx/html/
+# Copy the HTML file and background image to the appropriate location
+COPY index.html background.png /usr/share/nginx/html/
 
 # Create necessary directories and set permissions
 RUN mkdir -p /var/cache/nginx /var/run /var/log/nginx \
